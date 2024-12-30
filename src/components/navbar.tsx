@@ -1,8 +1,6 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import clsx from "clsx";
-import { useState } from "react";
 
 const navLinks = [
     { name: "About Us", href: "/about-us" },
@@ -11,19 +9,19 @@ const navLinks = [
 ];
 
 export default function NavBar() {
-    const pathname = usePathname();
-    const [isOpen, setIsOpen] = useState(false);
 
     return (
         <>
-            <div className="fixed left-0 top-0 z-50 w-full flex items-center bg-black px-[24px] py-[14px] lg:px-[72px] lg:py-[16px]">
+            <div className="fixed left-0 top-0 z-50 w-full h-[80px] flex items-center bg-black px-[24px] py-[14px] lg:px-[72px] lg:py-[16px]">
                 <div className="flex w-full items-center justify-between">
                     <Link href="/">
-                        <img
+                        <Image
                             src="/logo-tec.svg"
                             alt="logo-tec"
+                            width={40}
+                            height={40}
                             loading="lazy"
-                            className="h-[40px] hover:h-[50px] duration-300" 
+                            className="" 
                         />
                     </Link>
                     <div className="flex flex-row items-center gap-[70px]">
@@ -31,10 +29,9 @@ export default function NavBar() {
                             <Link
                                 key={navLink.name}
                                 href={navLink.href}
-                                className={clsx(
-                                    "w-auto text-center text-[#fff9f0] text-[20px] font-medium font-['Creato Display'] leading-[34.59px] tracking-[2.45px] hover:text-[20px] hover:tracking-[4px] transition-all duration-300",
-                                    { "font-bold": pathname === navLink.href } // Highlight link aktif
-                                )}
+                                className={
+                                    "w-auto text-center text-[#fff9f0] text-[20px] font-medium font-['Creato Display'] leading-[34.59px] tracking-[2.45px] hover:underline transition-all duration-300"// Highlight link aktif
+                                }
                             >
                                 {navLink.name || "Home"}
                             </Link>
