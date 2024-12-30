@@ -58,6 +58,7 @@ const TeamPage: React.FC = () => {
   const [managers, setManagers] = useState<otherMember[]>([]);
   const [staffs, setStaffs] = useState<otherMember[]>([]);
   const [loading, setLoading] = useState(true);
+  const [isMediumScreen, setIsMediumScreen] = useState(false);
 
   useEffect(() => {
     const fetchTeamMembers = async () => {
@@ -71,6 +72,18 @@ const TeamPage: React.FC = () => {
     fetchTeamMembers();
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMediumScreen(window.innerWidth >= 768);
+    };
+
+    if (typeof window !== "undefined") {
+      setIsMediumScreen(window.innerWidth >= 768);
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }
+  }, []);
+
   if (loading)
     return (
       <div className="bg-black text-white text-2xl w-screen h-screen flex items-center justify-center text-center">
@@ -80,13 +93,16 @@ const TeamPage: React.FC = () => {
 
   const renderMembers = (members: (r1Member | otherMember)[], isRing1: boolean = false) => {
     const rows = [];
-    for (let i = 0; i < members.length; i += 3) {
-      rows.push(members.slice(i, i + 3));
+    const itemsPerRow = isMediumScreen ? 3 : 1;
+
+    for (let i = 0; i < members.length; i += itemsPerRow) {
+      rows.push(members.slice(i, i + itemsPerRow));
     }
+
     return rows.map((row, rowIndex) => (
       <div key={rowIndex} className="flex justify-center w-full gap-4">
         {row.map((member) => (
-          <div key={member.id} className="flex-1 max-w-[33%]">
+          <div key={member.id} className="flex-1 w-full md:max-w-[33%]">
             <OrgaCard
               image={member.profilePic.responsiveImage.src}
               name={member.name}
