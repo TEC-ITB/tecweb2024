@@ -1,7 +1,13 @@
 export default function ourProgram() {
     return (
-        <div className="flex flex-col h-screen bg-black text-white">
-            <img src="/top-our-program.svg" alt="Our Program" className="" />
+        <main className="flex flex-col h-full bg-black text-white mt-[80px]">
+          <section className="h-[30vw] w-full flex">
+            <div className="bg-[url('/group.png')] bg-cover bg-center bg-no-repeat w-full h-full">
+              <div className="text-white w-full h-full bg-[#051338] bg-opacity-90 flex flex-col justify-center items-center leading-[1]">
+                <h1 className="text-[6vw] font-['helvetica'] text-shadow-glow-light">Our Program</h1>
+              </div>
+            </div>
+          </section>
 
             <div className="flex-1 mb-16 mx-32 mt-24">
                 {/* Company Visit Section */}
@@ -25,7 +31,7 @@ export default function ourProgram() {
                             </div>
                         <div>
                             <h2 className="text-6xl font-bold mb-4 text-gray-300">Company Visit</h2>
-                            <p className="text-gray-500 text-4xl leading-relaxed text-justify">
+                            <p className="text-gray-500 text-3xl leading-relaxed text-justify">
                             Program Company Visit kami memberikan kesempatan untuk melihat langsung operasional perusahaan dan memahami praktik kerja profesional. Setiap peserta TEC dapat belajar dari para ahli di industri dan mendapatkan wawasan baru. Program ini dirancang untuk memperluas pengetahuan serta mempersiapkan langkah karier ke depan.
                             </p>
                         </div>
@@ -36,7 +42,7 @@ export default function ourProgram() {
                 <div className="mb-16 mx-16 mt-48">
                     <div className="flex flex-row">
                         <h2 className="text-6xl font-bold mr-10 text-gray-300">Training and <br/> Development</h2>
-                        <p className="text-gray-500 text-4xl text-justify">
+                        <p className="text-gray-500 text-3xl text-justify">
                         Program Training and Development kami bertujuan membantu peserta meningkatkan keterampilan dan pengetahuan dalam berbisnis.
                         </p>
                     </div>
@@ -57,13 +63,13 @@ export default function ourProgram() {
                         />
                         <div className="items-center ml-8">
                             <h2 className="text-6xl font-bold mb-4 text-gray-300">IncubaTEC</h2>
-                            <p className="text-gray-500 text-4xl text-justify">
+                            <p className="text-gray-500 text-3xl text-justify">
                             Program Business Incubator kami dirancang untuk mendukung perkembangan ide bisnis. Peserta akan mendapatkan bimbingan intensif, akses ke mentor ahli, dan jaringan untuk mempercepat pertumbuhan ide bisnis.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     );
   }

@@ -1,6 +1,6 @@
 export default function aboutUs() {
     return (
-        <div className="h-screen bg-black font-['Helvetica'] ">
+        <section className="h-screen bg-black font-['Helvetica'] ">
             <div className="bg-[url('/bg-visi-misi.svg')] bg-contain bg-no-repeat h-5/6 justify-center flex flex-col bg-[center_top_50%]">
                 <h1 className="text-9xl ml-32 mr-32 text-left">
                     Our Vision
@@ -61,6 +61,6 @@ export default function aboutUs() {
                     <img src="/our-program-3.svg" className="w-1/4 h-auto" alt="our-program-3" />
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

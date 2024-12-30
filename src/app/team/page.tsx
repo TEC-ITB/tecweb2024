@@ -103,8 +103,8 @@ const TeamPage: React.FC = () => {
     <main className="mt-[75.75px] flex flex-col justify-center items-center w-full bg-black">
       <section className="h-[30vw] w-full flex">
         <div className="bg-[url('/group.png')] bg-cover bg-center bg-no-repeat w-full h-full">
-          <div className="text-white w-full h-full bg-[#051338] bg-opacity-90 flex flex-col justify-center items-center leading-[1]">
-            <h2 className="text-[4vw] font-bold">Kabinet Lakskarsa</h2>
+          <div className="text-white w-full h-full bg-[#051338] bg-opacity-90 flex flex-col justify-center items-center leading-[1] text-shadow-glow-light">
+            <h2 className="text-[4vw] font-bold ">Kabinet Lakskarsa</h2>
             <h1 className="text-[6vw] font-bold font-['helvetica']">TEAM</h1>
           </div>
         </div>
