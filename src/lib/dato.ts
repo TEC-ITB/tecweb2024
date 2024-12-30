@@ -1,6 +1,6 @@
 type PerformRequestParams = {
   query: string;
-  variables?: Record<string, any>;
+  variables?: Record<string, unknown>;
   includeDrafts?: boolean;
 };
 
