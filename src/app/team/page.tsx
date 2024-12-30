@@ -58,7 +58,7 @@ const TeamPage: React.FC = () => {
   const [managers, setManagers] = useState<otherMember[]>([]);
   const [staffs, setStaffs] = useState<otherMember[]>([]);
   const [loading, setLoading] = useState(true);
-  const [isMediumScreen, setIsMediumScreen] = useState(window.innerWidth >= 768);
+  const [isMediumScreen, setIsMediumScreen] = useState(false);
 
   useEffect(() => {
     const fetchTeamMembers = async () => {
@@ -77,8 +77,11 @@ const TeamPage: React.FC = () => {
       setIsMediumScreen(window.innerWidth >= 768);
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    if (typeof window !== "undefined") {
+      setIsMediumScreen(window.innerWidth >= 768);
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }
   }, []);
 
   if (loading)
