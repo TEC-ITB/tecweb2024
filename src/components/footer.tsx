@@ -6,7 +6,7 @@ export default function Footer() {
     return (
         <footer className="w-full bg-black h-[60px] lg:h-[80px] flex flex-col items-center justify-between">
             <div className="w-full h-[1px] bg-[#3f3f3f]"></div>
-            <div className="w-full flex items-center justify-between px-10 h-full">
+            <div className="w-full flex items-center justify-between px-6 sm:px-10 h-full">
                 <div className="flex items-center gap-3">
                     <Image
                         src="/logo-tec.svg"
@@ -15,11 +15,11 @@ export default function Footer() {
                         height={30}
                         loading="lazy"
                     />
-                    <span className="text-white font-semibold text-lg">
+                    <span className="text-white font-semibold sm:text-lg text-[14px]">
                         TEC ITB
                     </span>
                 </div>
-                <div className="flex items-center gap-3 text-[#fff9f0] text-sm gap-x-4 ">
+                <div className="flex items-center gap-3 sm:text-[#fff9f0] text-[0px] sm:text-sm gap-x-4">
                     <span>Our Social Media</span>
                     <div className="flex gap-4">
                         <Link
