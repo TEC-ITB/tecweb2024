@@ -40,26 +40,30 @@ export default function NavBar() {
     if (!isMounted) return null;
 
     return (
-        <div className="fixed left-0 top-0 z-50 w-full h-[80px] flex items-center bg-black px-[24px] py-[14px] lg:px-[72px] lg:py-[16px]">
+        <div className="fixed left-0 top-0 z-50 w-full h-[80px] flex items-center bg-black px-6 sm:px-[24px] lg:px-[72px] py-3">
             <div className="flex w-full items-center justify-between">
+                {/* Logo */}
                 <Link href="/">
                     <Image
                         src="/logo-tec.svg"
                         alt="logo-tec"
-                        width={40}
-                        height={40}
+                        width={32}
+                        height={32}
                         loading="lazy"
                     />
                 </Link>
-                <div className="flex flex-row items-center gap-[70px]">
+                {/* Navigasi */}
+                <div className="flex items-center gap-6 sm:gap-[50px] lg:gap-[70px]">
                     {navLinks.map((navLink) => (
                         <Link
                             key={navLink.name}
                             href={navLink.href}
-                            onClick={navLink.name === "About Us" ? handleAboutUsClick : undefined}
-                            className={
-                                "w-auto text-center text-[#fff9f0] text-[20px] font-medium font-['Creato Display'] leading-[34.59px] tracking-[2.45px] hover:underline transition-all duration-300"
+                            onClick={
+                                navLink.name === "About Us"
+                                    ? handleAboutUsClick
+                                    : undefined
                             }
+                            className="text-[#fff9f0] text-[14px] sm:text-[16px] lg:text-[20px] font-medium tracking-wide hover:underline transition-all duration-300"
                         >
                             {navLink.name || "Home"}
                         </Link>
@@ -68,4 +72,5 @@ export default function NavBar() {
             </div>
         </div>
     );
+    
 }
