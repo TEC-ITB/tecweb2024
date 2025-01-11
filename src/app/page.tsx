@@ -68,9 +68,15 @@ export default function Home() {
                 Our Program
               </h1>
               <div className="px-12 w-full flex flex-col md:flex-row justify-between items-center gap-8 md:gap-6 md:mx-16 pt-[4vw] pb-[1vw]">
-                <Image src="/program1.png" className="w-full h-auto" alt="our-program-1" width={2200} height={2200} />
-                <Image src="/program2.png" className="w-full h-auto" alt="our-program-2" width={2200} height={2200} />
-                <Image src="/program3.png" className="w-full h-auto" alt="our-program-3" width={2200} height={2200} />
+                <div className="flex w-full">
+                  <Image src="/program1.png" className="w-full h-auto" alt="our-program-1" width={2200} height={2200} />
+                </div>
+                <div className="flex w-full">
+                  <Image src="/program2.png" className="w-full h-auto" alt="our-program-2" width={2200} height={2200} />
+                </div>
+                <div className="flex w-full">
+                  <Image src="/program3.png" className="w-full h-auto" alt="our-program-3" width={2200} height={2200} />
+                </div>
               </div>
               <Link href="/our-program">
                 <button className="bg-[#002B6A] text-white text-[3vw] md:text-[1vw] py-2 px-4 rounded-lg mt-4 mb-6 hover:bg-[#002a6a9f] transition-colors hover:scale-[1.05]">See More</button>
