@@ -1,17 +1,18 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="bg-black h-full w-full pt-[80px]">
+    <main className="bg-black h-full w-full pt-[80px]">
       <section className="h-[60vw] md:h-[45vw] w-full flex">
         <div className="bg-[url('/group.png')] bg-cover bg-center bg-no-repeat w-full h-full">
           <div className="text-white w-full h-full bg-[#051338] bg-opacity-50 flex flex-col justify-center items-center leading-[1] text-shadow-glow-light">
-            <h1 className="text-[6vw] font-bold font-['helvetica']">TEC ITB</h1>
+            <h1 className="text-[6vw] font-bold ">TEC ITB</h1>
             <h2 className="text-[4vw] font-bold">Kabinet Lakskarsa</h2>
           </div>
         </div>
       </section>
-      <section id="about-us" className="h-full bg-black font-['Helvetica'] ">
+      <section id="about-us" className="h-full bg-black ">
           <div className="pt-12">
             <div className="bg-[url('/bg-visi-misi.svg')] px-[10vw] h-[40vw] text-white bg-contain bg-no-repeat justify-center flex flex-col bg-[center_top_50%]">
                 <h1 className="text-[10vw] md:text-[8vw] text-left">
@@ -62,17 +63,26 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="mt-12 text-white">
+            <div className="mt-12 text-white flex flex-col items-center justify-center">
               <h1 className="text-[5vw] md:text-[3vw] flex justify-center items-center font-semibold">
                 Our Program
               </h1>
-              <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0 md:mx-16 py-[8vw]">
-                <Image src="/our-program-1.svg" className="w-3/4 md:w-1/4 h-auto" alt="our-program-1" width={200} height={200} />
-                <Image src="/our-program-2.svg" className="w-3/4 md:w-1/4 h-auto" alt="our-program-2" width={200} height={200} />
-                <Image src="/our-program-3.svg" className="w-3/4 md:w-1/4 h-auto" alt="our-program-3" width={200} height={200} />
+              <div className="px-12 w-full flex flex-col md:flex-row justify-between items-center gap-8 md:gap-6 md:mx-16 pt-[4vw] pb-[1vw]">
+                <div className="flex w-full">
+                  <Image src="/program1.png" className="w-full h-auto" alt="our-program-1" width={2200} height={2200} />
+                </div>
+                <div className="flex w-full">
+                  <Image src="/program2.png" className="w-full h-auto" alt="our-program-2" width={2200} height={2200} />
+                </div>
+                <div className="flex w-full">
+                  <Image src="/program3.png" className="w-full h-auto" alt="our-program-3" width={2200} height={2200} />
+                </div>
               </div>
+              <Link href="/our-program">
+                <button className="bg-[#002B6A] text-white text-[3vw] md:text-[1vw] py-2 px-4 rounded-lg mt-4 mb-6 hover:bg-[#002a6a9f] transition-colors hover:scale-[1.05]">See More</button>
+              </Link>
             </div>
         </section>
-    </div>
+    </main>
   );
 }
