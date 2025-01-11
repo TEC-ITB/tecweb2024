@@ -18,18 +18,18 @@ export default function ourProgram() {
                         <div className="space-y-4 gap-2">
                             <div className="overflow-hidden rounded-lg w-full">
                                 <Image
-                                src="/comvis1.svg" 
+                                src="/compvis1.png" 
                                 alt="" 
                                 className="w-full"
-                                width={200} height={200} 
+                                width={2200} height={2200} 
                                 />
                             </div>
                             <div className="overflow-hidden rounded-lg w-full">
                                 <Image
-                                src="/comvis2.svg" 
+                                src="/compvis2.png" 
                                 alt="" 
                                 className="w-full"
-                                width={200} height={200} 
+                                width={2200} height={2200} 
                                 />
                             </div>
                         </div>
@@ -52,27 +52,27 @@ export default function ourProgram() {
                     </div>
                     <div className="flex md:flex-row flex-col justify-center items-center gap-10 mt-[5vw]">
                       <div className='w-full overflow-hidden rounded-lg'>
-                        <Image src="/tnd1.svg" alt="Personal branding presentation" className="w-full" width={200} height={200} />
+                        <Image src="/tnd1.png" alt="Personal branding presentation" className="w-full" width={2200} height={2200}  />
                       </div>
                       <div className='w-full overflow-hidden rounded-lg'>
-                        <Image src="/tnd2.svg" alt="Training session" className="w-full" width={200} height={200} />
+                        <Image src="/tnd2.png" alt="Training session" className="w-full" width={2200} height={2200}  />
                       </div>
                       <div className='w-full overflow-hidden rounded-lg'>
-                        <Image src="/tnd3.svg" alt="Work culture presentation" className="w-full" width={200} height={200} />
+                        <Image src="/tnd3.png" alt="Work culture presentation" className="w-full" width={2200} height={2200}  />
                       </div>
                     </div>
                 </div>
         
                 {/* IncubaTEC Section */}
                 <div className="my-[8vw]">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <h2 className="md:hidden flex text-[5vw] font-bold text-gray-300">IncubaTEC</h2>
                         <div className='w-full overflow-hidden rounded-lg flex justify-center items-center'>
                         <Image 
-                        src="/incubatec1.svg" 
+                        src="/incubatec1.png" 
                         alt=""
                         className="w-full rounded-lg"
-                        width={200} height={200}
+                        width={2200} height={2200} 
                         />
                         </div>
                         <div className="items-center">
