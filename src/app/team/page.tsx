@@ -38,17 +38,6 @@ const TEAM_QUERY = `
         }
       }
     }
-    allStaffs(filter: {}, orderBy: _createdAt_ASC)  {
-      id
-      name: name3
-      post: post3
-      division: division3
-      profilePic: profilePic3 {
-        responsiveImage {
-          src
-        }
-      }
-    }
   }
 `;
 
@@ -56,7 +45,7 @@ const TeamPage: React.FC = () => {
   const [ring1Members, setRing1Members] = useState<r1Member[]>([]);
   const [directors, setDirectors] = useState<otherMember[]>([]);
   const [managers, setManagers] = useState<otherMember[]>([]);
-  const [staffs, setStaffs] = useState<otherMember[]>([]);
+  // const [staffs, setStaffs] = useState<otherMember[]>([]);
   const [loading, setLoading] = useState(true);
   const [isMediumScreen, setIsMediumScreen] = useState(false);
 
@@ -66,7 +55,7 @@ const TeamPage: React.FC = () => {
       setRing1Members(data.allRing1s);
       setDirectors(data.allDirectors);
       setManagers(data.allManagers);
-      setStaffs(data.allStaffs);
+      // setStaffs(data.allStaffs);
       setLoading(false);
     };
     fetchTeamMembers();
