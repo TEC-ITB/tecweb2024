@@ -144,12 +144,12 @@ const TeamPage: React.FC = () => {
         <div className="flex flex-col my-4 gap-4">
           {renderMembers(managers)}
         </div>
-        <div className="text-[#5C5C5C] flex rounded items-center justify-center w-full bg-[#D9D9D9]">
+        {/* <div className="text-[#5C5C5C] flex rounded items-center justify-center w-full bg-[#D9D9D9]">
           <p className="my-2 text-3xl tracking-wider">Staffs</p>
         </div>
         <div className="flex flex-col my-4 gap-4">
           {renderMembers(staffs)}
-        </div>
+        </div> */}
       </section>
     </main>
   );
